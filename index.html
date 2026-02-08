@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>還暦 and 起業記念旅行</title>
+
+<style>
+:root {
+  --forest-dark: #1f2d24;
+  --forest-main: #2e4d3a;
+  --forest-accent: #6fa66f;
+  --forest-light: #e8f1ec;
+  --glass: rgba(0,0,0,0.45);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--forest-light);
+}
+
+header {
+  padding: 52px 16px 60px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 30px;
+  margin: 0;
+  letter-spacing: .05em;
+}
+
+header p {
+  margin-top: 14px;
+  opacity: .9;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background: var(--glass);
+  margin: 0 16px 24px;
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+}
+
+.tabs button {
+  flex: 1;
+  padding: 14px 8px;
+  border: none;
+  background: none;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.tabs button.active {
+  color: var(--forest-accent);
+  border-bottom: 2px solid var(--forest-accent);
+}
+
+section {
+  display: none;
+  background: var(--glass);
+  margin: 16px;
+  padding: 26px;
+  border-radius: 22px;
+  backdrop-filter: blur(10px);
+}
+
+section.active {
+  display: block;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--forest-accent);
+}
+
+.day {
+  margin-bottom: 42px;
+}
+
+.card {
+  background: rgba(255,255,255,0.07);
+  padding: 20px;
+  border-radius: 18px;
+  margin-top: 14px;
+  border-left: 4px solid var(--forest-accent);
+}
+
+.point {
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(111,166,111,0.15);
+  border-left: 4px solid var(--forest-accent);
+}
+
+.map {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--forest-accent);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  font-size: 13px;
+  opacity: .8;
+  margin: 36px 0 44px;
+}
+</style>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+  document.querySelectorAll(".tabs button").forEach(b => b.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  document.getElementById("btn-" + id).classList.add("active");
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <h1>還暦 and 起業記念旅行</h1>
+  <p>2026.5.2 − 5.5｜Forest Service TUNAGU 門出の旅</p>
+</header>
+
+<div class="tabs">
+  <button id="btn-overview" class="active" onclick="showTab('overview')">概要</button>
+  <button id="btn-schedule" onclick="showTab('schedule')">日程</button>
+  <button id="btn-detail" onclick="showTab('detail')">想い</button>
+</div>
+
+<section id="overview" class="active">
+  <h2>旅のテーマ</h2>
+  <p>
+    還暦という人生の大きな節目。  
+    そして <strong>Forest Service TUNAGU</strong> の新たなスタート。
+  </p>
+
+  <div class="card">
+    「これまで」への感謝と、  
+    「これから」への決意を、  
+    家族とともに静かに祝う旅です。
+  </div>
+</section>
+
+<section id="schedule">
+  <h2>日程</h2>
+
+  <!-- Day1 Tokyo -->
+  <div class="day">
+    <strong>【5/2】Day 1：職人の街・蔵前からスタート</strong>
+
+    <div class="card">
+      13:00｜東京スカイツリー集合  
+      <br>日本一の高さから「これからのビジョン」を展望。
+      <br><br>
+      15:00｜浅草寺 参拝  
+      <br>お父さんの健康と、TUNAGUの商売繁盛を祈願。
+      <br><br>
+      17:00｜宿チェックイン  
+      <br><strong>Minn 浅草蔵前 Station</strong>
+      <br>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&query=Minn+浅草蔵前+Station" target="_blank">
+        📍 Googleマップ
+      </a>
+    </div>
+
+    <div class="point">
+      🏠 <strong>ここがポイント</strong><br>
+      「蔵前」は、玩具や文房具の問屋街として栄えた職人の街。  
+      今ではカフェやアトリエが集まる、“新旧をつなぐ”東京らしいエリアです。  
+      アパートメントタイプの宿なので、  
+      初日の夜は家族みんなでゆっくり乾杯しましょう。
+    </div>
+  </div>
+
+  <!-- Day2 Kanazawa -->
+  <div class="day">
+    <strong>【5/3】Day 2：金沢・クリエイティブな夜</strong>
+
+    <div class="card">
+      午前｜北陸新幹線で金沢へ  
+      <br>車内では駅弁を楽しみながら。
+      <br><br>
+      13:00｜金沢市内観光  
+      <br>ひがし茶屋街、兼六園、21世紀美術館など。
+      <br><br>
+      16:00｜宿チェックイン  
+      <br><strong>泊まれる映画館 鼓 Tsuzumi Suite</strong>
+      <br>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&query=泊まれる映画館+鼓+Tsuzumi+Suite" target="_blank">
+        📍 Googleマップ
+      </a>
+    </div>
+
+    <div class="point">
+      🎬 <strong>ここがポイント</strong><br>
+      1日1組限定のプライベートシアター宿。  
+      150インチの大画面で、お父さんの思い出映像を流すのも◎。  
+      まさに「TUNAGU」の感性を刺激する、特別な一夜に。
+    </div>
+  </div>
+
+  <!-- Day3 Kaga -->
+  <div class="day">
+    <strong>【5/4】Day 3：加賀・1300年の名湯で祝宴</strong>
+
+    <div class="card">
+      11:00｜JRで加賀温泉へ  
+      <br><br>
+      15:00｜宿チェックイン  
+      <br><strong>湯の宿 白山菖蒲亭</strong>
+      <br>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&query=湯の宿+白山菖蒲亭" target="_blank">
+        📍 Googleマップ
+      </a>
+    </div>
+
+    <div class="point">
+      ♨️ <strong>ここがポイント</strong><br>
+      今回の旅のメインイベント。  
+      還暦祝いの会席料理と、1300年の歴史を持つ名湯。  
+      お父さんの日頃の疲れを、じっくり癒やしてもらいます。
+      <br><br>
+      🌸 夜｜還暦お祝いセレモニー  
+      <br>還暦祝い ＆ TUNAGU起業の決意表明！
+    </div>
+  </div>
+</section>
+
+<section id="detail">
+  <h2>この旅に込めた想い</h2>
+  <div class="card">
+    森を育てるように、  
+    人生も、仕事も、少しずつ次世代へ。
+    <br><br>
+    家族とともに踏み出すこの一歩が、  
+    Forest Service TUNAGU の原点になります。
+  </div>
+</section>
+
+<footer>
+  © Forest Service TUNAGU
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>還暦 and 起業記念旅行</title>
+
+<style>
+:root {
+  --forest-dark: #1f2d24;
+  --forest-main: #2e4d3a;
+  --forest-accent: #6fa66f;
+  --forest-light: #e8f1ec;
+  --glass: rgba(0,0,0,0.45);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--forest-light);
+}
+
+header {
+  padding: 52px 16px 60px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 30px;
+  margin: 0;
+  letter-spacing: .05em;
+}
+
+header p {
+  margin-top: 14px;
+  opacity: .9;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background: var(--glass);
+  margin: 0 16px 24px;
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+}
+
+.tabs button {
+  flex: 1;
+  padding: 14px 8px;
+  border: none;
+  background: none;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.tabs button.active {
+  color: var(--forest-accent);
+  border-bottom: 2px solid var(--forest-accent);
+}
+
+section {
+  display: none;
+  background: var(--glass);
+  margin: 16px;
+  padding: 26px;
+  border-radius: 22px;
+  backdrop-filter: blur(10px);
+}
+
+section.active {
+  display: block;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--forest-accent);
+}
+
+.day {
+  margin-bottom: 42px;
+}
+
+.card {
+  background: rgba(255,255,255,0.07);
+  padding: 20px;
+  border-radius: 18px;
+  margin-top: 14px;
+  border-left: 4px solid var(--forest-accent);
+}
+
+.point {
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(111,166,111,0.15);
+  border-left: 4px solid var(--forest-accent);
+}
+
+.map {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--forest-accent);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  font-size: 13px;
+  opacity: .8;
+  margin: 36px 0 44px;
+}
+</style>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+  document.querySelectorAll(".tabs button").forEach(b => b.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  document.getElementById("btn-" + id).classList.add("active");
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <h1>還暦 and 起業記念旅行</h1>
+  <p>2026.5.2 − 5.5｜Forest Service TUNAGU 門出の旅</p>
+</header>
+
+<div class="tabs">
+  <button id="btn-overview" class="active" onclick="showTab('overview')">概要</button>
+  <button id="btn-schedule" onclick="showTab('schedule')">日程</button>
+  <button id="btn-detail" onclick="showTab('detail')">想い</button>
+</div>
+
+<section id="overview" class="active">
+  <h2>旅のテーマ</h2>
+  <p>
+    還暦という人生の大きな節目。  
+    そして <strong>Forest Service TUNAGU</strong> の新たなスタート。
+  </p>
+
+  <div class="card">
+    「これまで」への感謝と、  
+    「これから」への決意を、  
+    家族とともに静かに祝う旅です。
+  </div>
+</section>
+
+<section id="schedule">
+  <h2>日程</h2>
+
+  <!-- Day1 Tokyo -->
+  <div class="day">
+    <strong>【5/2】Day 1：職人の街・蔵前からスタート</strong>
+
+    <div class="card">
+      13:00｜東京スカイツリー集合  
+      <br>日本一の高さから「これからのビジョン」を展望。
+      <br><br>
+      15:00｜浅草寺 参拝  
+      <br>お父さんの健康と、TUNAGUの商売繁盛を祈願。
+      <br><br>
+      17:00｜宿チェックイン  
+      <br><strong>Minn 浅草蔵前 Station</strong>
+      <br>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&query=Minn+浅草蔵前+Station" target="_blank">
+        📍 Googleマップ
+      </a>
+    </div>
+
+    <div class="point">
+      🏠 <strong>ここがポイント</strong><br>
+      「蔵前」は、玩具や文房具の問屋街として栄えた職人の街。  
+      今ではカフェやアトリエが集まる、“新旧をつなぐ”東京らしいエリアです。  
+      アパートメントタイプの宿なので、  
+      初日の夜は家族みんなでゆっくり乾杯しましょう。
+    </div>
+  </div>
+
+  <!-- Day2 Kanazawa -->
+  <div class="day">
+    <strong>【5/3】Day 2：金沢・クリエイティブな夜</strong>
+
+    <div class="card">
+      午前｜北陸新幹線で金沢へ  
+      <br>車内では駅弁を楽しみながら。
+      <br><br>
+      13:00｜金沢市内観光  
+      <br>ひがし茶屋街、兼六園、21世紀美術館など。
+      <br><br>
+      16:00｜宿チェックイン  
+      <br><strong>泊まれる映画館 鼓 Tsuzumi Suite</strong>
+      <br>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&query=泊まれる映画館+鼓+Tsuzumi+Suite" target="_blank">
+        📍 Googleマップ
+      </a>
+    </div>
+
+    <div class="point">
+      🎬 <strong>ここがポイント</strong><br>
+      1日1組限定のプライベートシアター宿。  
+      150インチの大画面で、お父さんの思い出映像を流すのも◎。  
+      まさに「TUNAGU」の感性を刺激する、特別な一夜に。
+    </div>
+  </div>
+
+  <!-- Day3 Kaga -->
+  <div class="day">
+    <strong>【5/4】Day 3：加賀・1300年の名湯で祝宴</strong>
+
+    <div class="card">
+      11:00｜JRで加賀温泉へ  
+      <br><br>
+      15:00｜宿チェックイン  
+      <br><strong>湯の宿 白山菖蒲亭</strong>
+      <br>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&query=湯の宿+白山菖蒲亭" target="_blank">
+        📍 Googleマップ
+      </a>
+    </div>
+
+    <div class="point">
+      ♨️ <strong>ここがポイント</strong><br>
+      今回の旅のメインイベント。  
+      還暦祝いの会席料理と、1300年の歴史を持つ名湯。  
+      お父さんの日頃の疲れを、じっくり癒やしてもらいます。
+      <br><br>
+      🌸 夜｜還暦お祝いセレモニー  
+      <br>還暦祝い ＆ TUNAGU起業の決意表明！
+    </div>
+  </div>
+</section>
+
+<section id="detail">
+  <h2>この旅に込めた想い</h2>
+  <div class="card">
+    森を育てるように、  
+    人生も、仕事も、少しずつ次世代へ。
+    <br><br>
+    家族とともに踏み出すこの一歩が、  
+    Forest Service TUNAGU の原点になります。
+  </div>
+</section>
+
+<footer>
+  © Forest Service TUNAGU
+</footer>
+
+</body>
+</html>
